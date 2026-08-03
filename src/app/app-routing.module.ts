@@ -17,6 +17,7 @@ const routes: Routes = [
     data: { roles: ['admin'] }
   },
   { path: '', redirectTo: '/tickets', pathMatch: 'full' },
+  { path: 'auth', loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule) },
   { path: '**', redirectTo: '/tickets' }
 ];
 
