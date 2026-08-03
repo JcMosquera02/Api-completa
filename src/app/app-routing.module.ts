@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/tickets', pathMatch: 'full' },
   { path: 'auth', loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule) },
   { path: 'tickets', loadChildren: () => import('./features/tickets/tickets.module').then(m => m.TicketsModule) },
+  { path: 'users', loadChildren: () => import('./features/users/users.module').then(m => m.UsersModule) },
   { path: '**', redirectTo: '/tickets' }
 ];
 
