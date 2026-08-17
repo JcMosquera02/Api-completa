@@ -1,1 +1,36 @@
-<p>ticket-list works!</p>
+<div class="ticket-list-container">
+    <h2>Lista de Tickets</h2>
+
+    <div class="filters">
+        <select [(ngModel)]="filters.status" (change)="onFilterChange()" [ngModelOptions]="{standalone: true}">
+            <option value="">Todos los estados</option>
+            <option value="open">Abierto</option>
+            <option value="in_progress">En progreso</option>
+            <option value="resolved">Resuelto</option>
+            <option value="closed">Cerrado</option>
+        </select>
+
+        <select [(ngModel)]="filters.priority" (change)="onFilterChange()" [ngModelOptions]="{standalone: true}">
+            <option value="">Todas las prioridades</option>
+            <option value="low">Baja</option>
+            <option value="medium">Media</option>
+            <option value="high">Alta</option>
+            <option value="urgent">Urgente</option>
+        </select>
+    </div>
+
+    <div class="tickets">
+        <div *ngFor="let ticket of tickets" class="ticket-card">
+            <h3>{{ ticket.title }}</h3>
+            <p><strong>Estado:</strong> {{ ticket.status }}</p>
+            <p><strong>Prioridad:</strong> {{ ticket.priority }}</p>
+            <p><strong>Creado por:</strong> {{ ticket.createdBy }}</p>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <app-button (click)="prevPage()" [disabled]="filters.page === 1">Anterior</app-button>
+        <span>Página {{ filters.page }}</span>
+        <app-button (click)="nextPage()">Siguiente</app-button>
+    </div>
+</div>
