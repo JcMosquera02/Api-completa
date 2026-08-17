@@ -1,0 +1,4 @@
+<div class="input-group">
+    <label *ngIf="label">{{ label }}</label>
+    <input [type]="type" [placeholder]="placeholder" [value]="value" (input)="onInput($event)" [disabled]="disabled">
+</div>
