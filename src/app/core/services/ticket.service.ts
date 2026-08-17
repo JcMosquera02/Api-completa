@@ -18,4 +18,16 @@ export class TicketService {
     }
     return this.http.get(`${this.API_URL}/tickets`, { params: httpParams });
   }
+
+  getTicketById(id: string) {
+    return this.http.get(`${this.API_URL}/tickets/${id}`);
+  }
+
+  getComments(ticketId: string) {
+    return this.http.get(`${this.API_URL}/tickets/${ticketId}/comments`);
+  }
+
+  addComment(ticketId: string, body: string) {
+    return this.http.post(`${this.API_URL}/tickets/${ticketId}/comments`, { body });
+  }
 }
