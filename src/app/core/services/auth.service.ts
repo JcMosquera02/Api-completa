@@ -9,10 +9,18 @@ export class AuthService {
   private readonly TOKEN_KEY = 'accessToken';
   private readonly REFRESH_TOKEN_KEY = 'refreshToken';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(email: string, password: string) {
     return this.http.post(`${this.API_URL}/auth/login`, { email, password }).pipe(
+      tap((res: any) => {
+        this.setTokens(res.accessToken, res.refreshToken);
+      })
+    );
+  }
+
+  register(name: string, email: string, password: string) {
+    return this.http.post(`${this.API_URL}/auth/register`, { name, email, password }).pipe(
       tap((res: any) => {
         this.setTokens(res.accessToken, res.refreshToken);
       })
