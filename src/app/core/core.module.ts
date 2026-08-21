@@ -7,11 +7,13 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { TokenRefreshInterceptor } from './interceptors/token-refresh.interceptor';
 import { AuthService } from './services/auth.service';
 import { UserService } from './services/user.service';
+import { TicketService } from './services/ticket.service';
 
 @NgModule({
   providers: [
     AuthService,
     UserService,
+    TicketService,
     AuthGuard,
     RoleGuard,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
