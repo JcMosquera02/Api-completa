@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class TicketService {
   private readonly API_URL = environment.apiUrl;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getTickets(params?: { status?: string; priority?: string; page?: number; limit?: number }) {
     let httpParams = new HttpParams();
