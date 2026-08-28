@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
@@ -9,9 +9,9 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   getUsers(role?: string | null) {
-    const params: { role?: string } = {};
+    let params = new HttpParams();
     if (role) {
-      params.role = role;
+      params = params.append('role', role);
     }
     return this.http.get(`${this.API_URL}/users`, { params });
   }
