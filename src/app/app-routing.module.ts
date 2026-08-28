@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RoleGuard } from './core/guards/role.guard';
 
 const routes: Routes = [
   {
     path: 'auth',
-    loadchildren: () => import('./features/auth/auth.module').them(m => m.AuthModule)
+    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)
   },
   {
     path: 'tickets',
-    loadChildren: () => import('.features/tickests/tickest.module')then.(m => m.TicketsModule)
+    loadChildren: () => import('./features/tickets/tickets.module').then(m => m.TicketsModule)
   },
   {
     path: 'users',
@@ -17,9 +18,6 @@ const routes: Routes = [
     data: { roles: ['admin'] }
   },
   { path: '', redirectTo: '/tickets', pathMatch: 'full' },
-  { path: 'auth', loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule) },
-  { path: 'tickets', loadChildren: () => import('./features/tickets/tickets.module').then(m => m.TicketsModule) },
-  { path: 'users', loadChildren: () => import('./features/users/users.module').then(m => m.UsersModule) },
   { path: '**', redirectTo: '/tickets' }
 ];
 
