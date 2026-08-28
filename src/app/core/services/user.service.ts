@@ -8,8 +8,11 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  getUsers(role?: string) {
-    const params = role ? { role } : {};
+  getUsers(role?: string | null) {
+    const params: { role?: string } = {};
+    if (role) {
+      params.role = role;
+    }
     return this.http.get(`${this.API_URL}/users`, { params });
   }
 
