@@ -14,7 +14,7 @@ import { TicketService } from './services/ticket.service';
     AuthService,
     UserService,
     TicketService,
-    AuthGuard,
+    { provide: AuthGuard, useValue: AuthGuard },
     { provide: RoleGuard, useValue: RoleGuard },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: TokenRefreshInterceptor, multi: true }
