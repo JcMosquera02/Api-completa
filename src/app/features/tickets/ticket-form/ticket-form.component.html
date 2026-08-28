@@ -1,0 +1,35 @@
+<div class="ticket-form-container">
+    <h2>{{ isEditMode ? 'Editar Ticket' : 'Crear Ticket' }}</h2>
+    <form [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+        <app-input formControlName="title" label="Título" type="text" placeholder="Ej: Problema con la impresora">
+        </app-input>
+
+        <app-input formControlName="description" label="Descripción" type="text" placeholder="Describe el problema...">
+        </app-input>
+
+        <div class="form-group">
+            <label>Prioridad</label>
+            <select formControlName="priority">
+                <option value="low">Baja</option>
+                <option value="medium">Media</option>
+                <option value="high">Alta</option>
+                <option value="urgent">Urgente</option>
+            </select>
+        </div>
+
+        <div *ngIf="userRole === 'admin' || userRole === 'agent'" class="form-group">
+            <label>Estado</label>
+            <select formControlName="status">
+                <option value="open">Abierto</option>
+                <option value="in_progress">En progreso</option>
+                <option value="resolved">Resuelto</option>
+                <option value="closed">Cerrado</option>
+            </select>
+        </div>
+
+        <app-button type="submit" [disabled]="ticketForm.invalid">
+            {{ isEditMode ? 'Guardar Cambios' : 'Crear Ticket' }}
+        </app-button>
+        <app-button type="button" routerLink="/tickets">Cancelar</app-button>
+    </form>
+</div>

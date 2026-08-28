@@ -1,0 +1,197 @@
+[33mcommit ba739ed0e719cd67d3cff419fe4db6118016a296[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mdevelop[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 28 08:48:44 2026 -0500
+
+    fix(login): correct formGroup usage in LoginComponent
+
+[33mcommit cad5f6b40ef750835c50585a08d59d7524a6f295[m[33m ([m[1;31morigin/fix/configure-environment-files/julian/030[m[33m, [m[1;31morigin/develop[m[33m, [m[1;32mfix/configure-environment-files/julian/030[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 28 08:45:58 2026 -0500
+
+    fix(environment): configure environment files with API URL
+
+[33mcommit ee77a76f111e4949f4b42080e06bbfcc50ecd3d7[m[33m ([m[1;31morigin/refactor/auth-guard-to-canactivatefn/julian/029[m[33m, [m[1;32mrefactor/auth-guard-to-canactivatefn/julian/029[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 28 08:38:06 2026 -0500
+
+    refactor(auth): update AuthGuard to CanActivateFn because is deprecated
+
+[33mcommit d40af5960082fe54afa73a23bc58b9dfa059c8a5[m[33m ([m[1;31morigin/feat/add-get-user-role/julian/028[m[33m, [m[1;32mfeat/add-get-user-role/julian/028[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 28 08:36:10 2026 -0500
+
+    feat(auth): add getUserRole method to AuthService
+
+[33mcommit fb6f825388d2fc7024174726b6f796038f39d1df[m[33m ([m[1;31morigin/refactor/role-guard-to-canactivatefn/julian/027[m[33m, [m[1;32mrefactor/role-guard-to-canactivatefn/julian/027[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 28 08:33:34 2026 -0500
+
+    refactor(auth): update RoleGuard to CanActivateFn because is deprecated
+
+[33mcommit ecba0a5adf37f074ebda15c2e5b0e3184b53de8b[m[33m ([m[1;31morigin/feat/implement-ticket-form-component/julian/026[m[33m, [m[1;32mfeat/implement-ticket-form-component/julian/026[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 28 08:28:12 2026 -0500
+
+    feat(tickets): implement TicketFormComponent for create/edit tickets
+
+[33mcommit febfb7a1f8fd4dbd905e0b56cc4a3ecd9344c628[m[33m ([m[1;31morigin/fix/role-guard-imports/julian/025[m[33m, [m[1;32mfix/role-guard-imports/julian/025[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 21 11:42:34 2026 -0500
+
+    fix(auth): correct import path for AuthService in RoleGuard
+
+[33mcommit c12fe36216490a7a7834be0fd4690565897e3c61[m[33m ([m[1;31morigin/fix/token-refresh-interceptor-imports/julian/024[m[33m, [m[1;32mfix/token-refresh-interceptor-imports/julian/024[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 21 11:40:36 2026 -0500
+
+    fix(auth): correct import path for AuthService in TokenRefreshInterceptor
+
+[33mcommit e4a3bbfcbb80f4b4361fbcee5653c231f1cf8e65[m[33m ([m[1;31morigin/fix/auth-interceptor-imports/julian/023[m[33m, [m[1;32mfix/auth-interceptor-imports/julian/023[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 21 11:38:32 2026 -0500
+
+    fix(auth): correct import path for AuthService in AuthInterceptor
+
+[33mcommit 9c5d57251c42d3940ebc20e0ffc5c60cee8dd977[m[33m ([m[1;31morigin/fix/environment-imports/julian/021[m[33m, [m[1;32mfix/environment-imports/julian/021[m[33m, [m[1;32mfix/core-module-imports/julian/022[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 21 11:33:58 2026 -0500
+
+    fix(environment): correct import paths for environment in services
+
+[33mcommit 5e563ea0cd2e72f2d09ae4778cc82a2c386014cf[m[33m ([m[1;31morigin/feat/implement-user-service/julian/020[m[33m, [m[1;32mfeat/implement-user-service/julian/020[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Fri Aug 21 11:08:38 2026 -0500
+
+    feat(users): implement UserService for user management
+
+[33mcommit e3fa0b91c340fdeaadab1e60fc66928a83ce644d[m[33m ([m[1;31morigin/feat/implement-ticket-detail-component/julian/019[m[33m, [m[1;32mfeat/implement-ticket-detail-component/julian/019[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 07:56:55 2026 -0500
+
+    feat(tickets): implement TicketDetailComponent with comments
+
+[33mcommit 661e5bb1c525f0f84de80388642b39b066b319f4[m[33m ([m[1;31morigin/feat/implement-ticket-list-component/julian/018[m[33m, [m[1;32mfeat/implement-ticket-list-component/julian/018[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 07:53:22 2026 -0500
+
+    feat(tickets): implement TicketListComponent with filters and pagination
+
+[33mcommit d2bc526658cbb59fa53f791e2488acb1f91d38d5[m[33m ([m[1;31morigin/feat/implement-register-component/julian/017[m[33m, [m[1;32mfeat/implement-register-component/julian/017[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 07:50:41 2026 -0500
+
+    feat(auth): implement RegisterComponent with form validation
+
+[33mcommit 1b2ef4a57d8a149a2483463d481cbd5a5cc5c47a[m[33m ([m[1;31morigin/feat/implement-login-component/julian/016[m[33m, [m[1;32mfeat/implement-login-component/julian/016[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 06:29:30 2026 -0500
+
+    feat(auth): implement LoginComponent with form validation
+
+[33mcommit ae3cdf4b231b2c916e309a3c623ed7e0f28c7d2f[m[33m ([m[1;31morigin/feat/create-input-component/julian/015[m[33m, [m[1;32mfeat/create-input-component/julian/015[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 06:27:04 2026 -0500
+
+    feat(shared): add reusable InputComponent
+
+[33mcommit fac7d2d28be00bf35d96ce4ee2247be32bda14e4[m[33m ([m[1;31morigin/feat/implement-token-refresh-interceptor/julian/014[m[33m, [m[1;32mfeat/implement-token-refresh-interceptor/julian/014[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 06:23:00 2026 -0500
+
+    feat(auth): implement TokenRefreshInterceptor for automatic token renewal
+
+[33mcommit 70b3546b440de56703c86487a8ae4879c6492444[m[33m ([m[1;31morigin/feat/implement-auth-interceptor/julian/013[m[33m, [m[1;32mfeat/implement-auth-interceptor/julian/013[m[33m)[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 06:19:18 2026 -0500
+
+    feat(auth): implement AuthInterceptor for JWT token handling
+
+[33mcommit 353b786ec8c4784eab5b58f349c8c1d33979addb[m
+Author: Julian Camilo Mosquera <juliancamilomosquera6@gmail.com>
+Date:   Mon Aug 17 06:18:16 2026 -0500
+
+    feat(auth): implement AuthInterceptor for JWT token handling
+
+[33mcommit c6cae57d740934d0bf3652378ddffbfa1c85b811[m[33m ([m[1;31morigin/feat/create-users-module/julian/012[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 14:58:51 2026 -0500
+
+    feat(users): add UsersModule with UserListComponent
+
+[33mcommit 34c985cbd1f7bd4bad84ecc9017829ce4f891a79[m[33m ([m[1;31morigin/feat/implement-role-guard/julian/011[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 14:51:26 2026 -0500
+
+    feat(auth): implement RoleGuard for role-based access
+
+[33mcommit c462bab3336757131494d195be6b45211f5f25b6[m[33m ([m[1;31morigin/feat/create-ticket-service/julian/010[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 14:45:30 2026 -0500
+
+    feat(tickets): add TicketService skeleton
+
+[33mcommit 168592d1b34110eab83ba3eb99a54c465aeaf826[m[33m ([m[1;31morigin/feat/create-tickets-module/julian/009[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 14:33:03 2026 -0500
+
+    feat(tickets): add TicketsModule with TicketListComponent
+
+[33mcommit d21c2f7b0deef04cd78d6097a5b17100bed18e80[m[33m ([m[1;31morigin/feat/implement-auth-guard/julian/008[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 14:21:21 2026 -0500
+
+    feat(auth): implement AuthGuard for route protection
+
+[33mcommit 610a73cac7c4ab37c076d25b134435725e49b432[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 14:20:31 2026 -0500
+
+    feat(auth): implement AuthGuard for route protection
+
+[33mcommit e4fd581adea8316412f9adae0870a8a3cd25d78c[m[33m ([m[1;31morigin/feat/create-auth-module/julian/007[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 14:03:38 2026 -0500
+
+    feat(auth): add AuthModule with login and register components
+
+[33mcommit c50745219b6c2f3897f4fc2a5d6a9c865b48f46e[m[33m ([m[1;31morigin/feat/create-button-component/julian/006[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 13:48:03 2026 -0500
+
+    feat(shared): add reusable ButtonComponent
+
+[33mcommit 65082d155ab77b72a4c125036042fcb2c6bc3ba5[m[33m ([m[1;31morigin/feat/create-shared-module/julian/005[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 13:43:52 2026 -0500
+
+    feat(shared): add SharedModule skeleton
+
+[33mcommit e38d2d5d4178b381c393fd80216843ede76c7595[m[33m ([m[1;31morigin/feat/implement-login-method/julian/004[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 13:39:54 2026 -0500
+
+    feat(auth): implement login method in AuthService
+
+[33mcommit 88d09fabf3b2aa9f2d5b550d0cbb375623f97eb3[m[33m ([m[1;31morigin/feat/create-auth-service/julian/003[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 13:36:01 2026 -0500
+
+    feat(auth): add AuthService skeleton
+
+[33mcommit 3fd164399505ee6bb70bb841503b53df5547d4d9[m[33m ([m[1;31morigin/feat/create-core-module/julian/002[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 13:29:32 2026 -0500
+
+    feat(core): add CoreModule structure
+
+[33mcommit 857dea09814a1276f5805f84cb57f50e3c3f3ded[m[33m ([m[1;31morigin/feat/configure-lazy-loading/julian/001[m[33m)[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 13:18:04 2026 -0500
+
+    feat(routing): configure lazy loading for auth, tickets, and users modules
+
+[33mcommit 8b7a0540860f6e1bd7165c25f647be568a047ec2[m
+Author: JulianCamiloMosquera <juliancamilomosquera>
+Date:   Mon Aug 3 12:30:29 2026 -0500
+
+    chore: initialize project base

@@ -1,0 +1,22 @@
+<div *ngIf="ticket" class="ticket-detail-container">
+    <h2>{{ ticket.title }}</h2>
+    <p><strong>Descripción:</strong> {{ ticket.description }}</p>
+    <p><strong>Estado:</strong> {{ ticket.status }}</p>
+    <p><strong>Prioridad:</strong> {{ ticket.priority }}</p>
+    <p><strong>Creado por:</strong> {{ ticket.createdBy }}</p>
+
+    <div class="comments-section">
+        <h3>Comentarios</h3>
+        <div *ngFor="let comment of comments" class="comment">
+            <p><strong>{{ comment.author.name }}:</strong> {{ comment.body }}</p>
+            <small>{{ comment.createdAt | date:'short' }}</small>
+        </div>
+
+        <form [formGroup]="commentForm" (ngSubmit)="addComment()">
+            <app-input formControlName="body" label="Nuevo comentario" type="text"
+                placeholder="Escribe un comentario...">
+            </app-input>
+            <app-button type="submit" [disabled]="commentForm.invalid">Agregar Comentario</app-button>
+        </form>
+    </div>
+</div>
