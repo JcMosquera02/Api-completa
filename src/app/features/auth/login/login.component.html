@@ -1,16 +1,21 @@
 <div class="login-container">
     <h2>Iniciar Sesión</h2>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <app-input formControlName="email" label="Correo" type="email" placeholder="Ej: admin@helpdesk.dev">
-        </app-input>
+        <div class="form-group">
+            <label>Correo</label>
+            <input type="email" formControlName="email" placeholder="Ej: admin@helpdesk.dev" class="form-control">
+        </div>
 
-        <app-input formControlName="password" label="Contraseña" type="password" placeholder="Ej: Admin123!">
-        </app-input>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" formControlName="password" placeholder="Ej: Admin123!" class="form-control">
+        </div>
 
-        <app-button type="submit" [disabled]="loginForm.invalid">
+        <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">
             Iniciar Sesión
-        </app-button>
+        </button>
     </form>
+
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
     <p>¿No tienes cuenta? <a routerLink="/auth/register">Regístrate</a></p>
 </div>

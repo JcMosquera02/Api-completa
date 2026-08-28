@@ -1,19 +1,26 @@
 <div class="register-container">
     <h2>Registrarse</h2>
     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-        <app-input formControlName="name" label="Nombre" type="text" placeholder="Ej: Juan Pérez">
-        </app-input>
+        <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" formControlName="name" placeholder="Ej: Juan Pérez" class="form-control">
+        </div>
 
-        <app-input formControlName="email" label="Correo" type="email" placeholder="Ej: juan@ejemplo.com">
-        </app-input>
+        <div class="form-group">
+            <label>Correo</label>
+            <input type="email" formControlName="email" placeholder="Ej: juan@ejemplo.com" class="form-control">
+        </div>
 
-        <app-input formControlName="password" label="Contraseña" type="password" placeholder="Mínimo 6 caracteres">
-        </app-input>
+        <div class="form-group">
+            <label>Contraseña</label>
+            <input type="password" formControlName="password" placeholder="Mínimo 6 caracteres" class="form-control">
+        </div>
 
-        <app-button type="submit" [disabled]="registerForm.invalid">
+        <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">
             Registrarse
-        </app-button>
+        </button>
     </form>
+
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
     <p>¿Ya tienes cuenta? <a routerLink="/auth/login">Iniciar Sesión</a></p>
 </div>
