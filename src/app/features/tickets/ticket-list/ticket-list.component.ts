@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketService } from '../../../core/services/ticket.service';
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-ticket-list',
@@ -8,6 +9,7 @@ import { TicketService } from '../../../core/services/ticket.service';
 })
 export class TicketListComponent implements OnInit {
   tickets: any[] = [];
+  userRole: string | null = null;
   filters = {
     status: '',
     priority: '',
@@ -15,16 +17,25 @@ export class TicketListComponent implements OnInit {
     limit: 10
   };
 
-  constructor(private ticketService: TicketService) { }
+  constructor(
+    private ticketService: TicketService,
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void {
+    this.userRole = this.authService.getUserRole();
     this.loadTickets();
   }
 
   loadTickets(): void {
     this.ticketService.getTickets(this.filters).subscribe({
-      next: (res: any) => this.tickets = res.data,
-      error: (err) => console.error(err)
+      next: (res: any) => {
+        this.tickets = res.data || [];
+        console.log('Tickets cargados:', this.tickets); // Verifica en la consola
+      },
+      error: (err) => {
+        console.error('Error al cargar tickets:', err);
+      }
     });
   }
 
