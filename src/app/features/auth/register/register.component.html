@@ -10,7 +10,9 @@
         <app-input formControlName="password" label="Contraseña" type="password" placeholder="Mínimo 6 caracteres">
         </app-input>
 
-        <app-button type="submit" [disabled]="registerForm.invalid">Registrarse</app-button>
+        <app-button type="submit" [disabled]="registerForm.invalid">
+            Registrarse
+        </app-button>
     </form>
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
     <p>¿Ya tienes cuenta? <a routerLink="/auth/login">Iniciar Sesión</a></p>
