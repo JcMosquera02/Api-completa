@@ -10,7 +10,7 @@ export class AuthService {
   private readonly REFRESH_TOKEN_KEY = 'refreshToken';
   private readonly USER_KEY = 'user';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(email: string, password: string) {
     return this.http.post(`${this.API_URL}/auth/login`, { email, password }).pipe(
