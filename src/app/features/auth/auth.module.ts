@@ -6,7 +6,7 @@ import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { SharedModule } from '../../shared/shared.module';
-
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
@@ -16,6 +16,7 @@ import { SharedModule } from '../../shared/shared.module';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     AuthRoutingModule,
     SharedModule
   ]
