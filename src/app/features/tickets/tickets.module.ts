@@ -4,11 +4,13 @@ import { TicketsRoutingModule } from './tickets-routing.module';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { SharedModule } from '../../shared/shared.module';
 import { TicketDetailComponent } from './ticket-detail/ticket-detail.component';
+import { TicketFormComponent } from './ticket-form/ticket-form.component';
 
 @NgModule({
   declarations: [
     TicketListComponent,
-    TicketDetailComponent
+    TicketDetailComponent,
+    TicketFormComponent
   ],
   imports: [
     CommonModule,
