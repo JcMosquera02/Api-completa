@@ -2,7 +2,7 @@
     <h2>Lista de Tickets</h2>
 
     <div class="filters">
-        <select [(ngModel)]="filters.status" (change)="onFilterChange()" [ngModelOptions]="{standalone: true}">
+        <select [(ngModel)]="filters.status" (change)="onFilterChange()">
             <option value="">Todos los estados</option>
             <option value="open">Abierto</option>
             <option value="in_progress">En progreso</option>
@@ -10,7 +10,7 @@
             <option value="closed">Cerrado</option>
         </select>
 
-        <select [(ngModel)]="filters.priority" (change)="onFilterChange()" [ngModelOptions]="{standalone: true}">
+        <select [(ngModel)]="filters.priority" (change)="onFilterChange()">
             <option value="">Todas las prioridades</option>
             <option value="low">Baja</option>
             <option value="medium">Media</option>
