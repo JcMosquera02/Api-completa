@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TicketsRoutingModule } from './tickets-routing.module';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
 import { SharedModule } from '../../shared/shared.module';
@@ -16,6 +16,7 @@ import { TicketFormComponent } from './ticket-form/ticket-form.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     TicketsRoutingModule,
     SharedModule
   ]
