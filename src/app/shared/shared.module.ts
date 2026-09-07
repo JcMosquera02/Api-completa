@@ -5,8 +5,16 @@ import { InputComponent } from './components/input/input.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
-  declarations: [ButtonComponent, InputComponent, NavbarComponent],
+  declarations: [
+    ButtonComponent,
+    InputComponent,
+    NavbarComponent
+  ],
   imports: [CommonModule],
-  exports: [ButtonComponent, InputComponent]
+  exports: [
+    ButtonComponent,
+    InputComponent,
+    NavbarComponent
+  ]
 })
 export class SharedModule { }
