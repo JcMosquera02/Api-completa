@@ -1,22 +1,31 @@
 <div *ngIf="ticket" class="ticket-detail-container">
     <h2>{{ ticket.title }}</h2>
-    <p><strong>Descripción:</strong> {{ ticket.description }}</p>
-    <p><strong>Estado:</strong> {{ ticket.status }}</p>
-    <p><strong>Prioridad:</strong> {{ ticket.priority }}</p>
-    <p><strong>Creado por:</strong> {{ ticket.createdBy }}</p>
+
+    <div class="ticket-info">
+        <p><strong>Descripción:</strong> {{ ticket.description }}</p>
+        <p><strong>Estado:</strong> {{ ticket.status }}</p>
+        <p><strong>Prioridad:</strong> {{ ticket.priority }}</p>
+        <p><strong>Creado por:</strong> {{ ticket.createdBy }}</p>
+        <p *ngIf="ticket.assignedTo"><strong>Asignado a:</strong> {{ ticket.assignedTo }}</p>
+        <p><strong>Fecha de creación:</strong> {{ ticket.createdAt | date:'medium' }}</p>
+        <p *ngIf="ticket.updatedAt"><strong>Última actualización:</strong> {{ ticket.updatedAt | date:'medium' }}</p>
+    </div>
 
     <div class="comments-section">
         <h3>Comentarios</h3>
         <div *ngFor="let comment of comments" class="comment">
-            <p><strong>{{ comment.author.name }}:</strong> {{ comment.body }}</p>
+            <p><strong>{{ comment.author.name }} ({{ comment.author.role }}):</strong> {{ comment.body }}</p>
             <small>{{ comment.createdAt | date:'short' }}</small>
         </div>
 
         <form [formGroup]="commentForm" (ngSubmit)="addComment()">
-            <app-input formControlName="body" label="Nuevo comentario" type="text"
-                placeholder="Escribe un comentario...">
-            </app-input>
-            <app-button type="submit" [disabled]="commentForm.invalid">Agregar Comentario</app-button>
+            <div class="form-group">
+                <label>Nuevo Comentario</label>
+                <textarea formControlName="body" placeholder="Escribe un comentario..." class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="commentForm.invalid">
+                Agregar Comentario
+            </button>
         </form>
     </div>
 </div>
