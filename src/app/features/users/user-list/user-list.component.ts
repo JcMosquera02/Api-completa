@@ -20,7 +20,7 @@ export class UserListComponent implements OnInit {
       next: (res: any) => {
         this.users = res.data || [];
       },
-      error: (err) => {
+      error: (err: any) => {
         console.error('Error al cargar usuarios:', err);
       }
     });
