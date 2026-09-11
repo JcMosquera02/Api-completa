@@ -1,0 +1,102 @@
+.ticket-form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+        font-size: 24px;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+    }
+
+    .ticket-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            label {
+                font-weight: 600;
+                color: #444;
+                font-size: 16px;
+            }
+
+            input,
+            textarea,
+            select {
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 16px;
+                transition: border-color 0.3s;
+                width: 100%;
+
+                &:focus {
+                    outline: none;
+                    border-color: #007bff;
+                    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+                }
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 120px;
+            }
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-top: 10px;
+
+            .btn {
+                padding: 12px 24px;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.2s;
+
+                &:hover:not(:disabled) {
+                    transform: translateY(-2px);
+                }
+
+                &:disabled {
+                    opacity: 0.6;
+                    cursor: not-allowed;
+                }
+            }
+
+            .btn-primary {
+                background-color: #28a745;
+                color: white;
+
+                &:hover:not(:disabled) {
+                    background-color: #218838;
+                }
+            }
+
+            .btn-secondary {
+                background-color: #6c757d;
+                color: white;
+
+                &:hover:not(:disabled) {
+                    background-color: #5a6268;
+                }
+            }
+        }
+    }
+}
