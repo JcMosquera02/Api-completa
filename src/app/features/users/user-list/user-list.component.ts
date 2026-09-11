@@ -9,7 +9,7 @@ import { UserService } from '../../../core/services/user.service';
 export class UserListComponent implements OnInit {
   users: any[] = [];
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     this.loadUsers();
@@ -19,6 +19,7 @@ export class UserListComponent implements OnInit {
     this.userService.getUsers().subscribe({
       next: (res: any) => {
         this.users = res.data || [];
+        console.log('Usuarios cargados:', this.users);
       },
       error: (err: any) => {
         console.error('Error al cargar usuarios:', err);
