@@ -1,6 +1,13 @@
 <div class="ticket-list-container">
     <h2>Lista de Tickets</h2>
 
+    <div class="create-ticket-button-container">
+        <button *ngIf="userRole === 'admin' || userRole === 'client'" [routerLink]="['/tickets/new']"
+            class="btn btn-primary">
+            Crear Ticket
+        </button>
+    </div>
+
     <div class="filters">
         <select [(ngModel)]="filters.status" (change)="onFilterChange()" [ngModelOptions]="{standalone: true}">
             <option value="">Todos los estados</option>
