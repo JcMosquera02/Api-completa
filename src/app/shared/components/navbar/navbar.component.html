@@ -5,7 +5,7 @@
         </div>
         <div class="navbar-menu">
             <a routerLink="/tickets" class="nav-link">Tickets</a>
-            <a *ngIf="authService.getUserRole() === 'admin'" routerLink="/users" class="nav-link">Usuarios</a>
+            <a *ngIf="userRole === 'admin'" routerLink="/users" class="nav-link">Usuarios</a>
             <button (click)="logout()" class="nav-link logout-button">Cerrar Sesión</button>
         </div>
     </div>
