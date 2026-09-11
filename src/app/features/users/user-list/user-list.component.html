@@ -1,11 +1,15 @@
 <div class="user-list-container">
     <h2>Lista de Usuarios</h2>
 
-    <div class="users">
+    <div *ngIf="users.length > 0; else noUsers" class="users">
         <div *ngFor="let user of users" class="user-card">
             <h3>{{ user.name }}</h3>
             <p><strong>Correo:</strong> {{ user.email }}</p>
             <p><strong>Rol:</strong> {{ user.role }}</p>
         </div>
     </div>
+
+    <ng-template #noUsers>
+        <p>No hay usuarios para mostrar.</p>
+    </ng-template>
 </div>

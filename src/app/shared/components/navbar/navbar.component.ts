@@ -13,6 +13,10 @@ export class NavbarComponent {
     private router: Router
   ) {}
 
+  get userRole(): string | null {
+    return this.authService.getUserRole();
+  }
+
   logout(): void {
     this.authService.logout();
     this.router.navigate(['/auth/login']);
